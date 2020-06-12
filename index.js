@@ -1,9 +1,20 @@
 const inquirer = require("inquirer");
-const fs = require("fs");
+const fs = require("fs").promises;
 
+// Prompting user responses
 async function mainApp(){
   const response = await inquirer
     .prompt([
+      {
+        type: "text",
+        message: "What is your Github email address?",
+        name: "email"
+      },
+      {
+        type: "text",
+        message: "Please provide a link to your Github profile picture.",
+        name: "profile"
+      },
       {
         type: "text",
         message: "Please include at least one badge. What's the label of your first badge?",
@@ -62,12 +73,35 @@ async function mainApp(){
       }
     ])
 
-    // console.log( `inquirer prompts finished, got response: `, response )
+    var copy = [];
 
-    // fs.appendFile('message.txt', process.argv[2], (err) =>{
-    //     if (err) throw err;
-    //     console.log(`Data successfully appended`);
-    // });
+    function addToFile(){
+        copy = [
+            `[<img src="https://img.shields.io/badge/${response.label1}-${response.message1}-${response.color1}">]`,
+            `# ${response.title}`,
+            `## Description`,
+            `${response.description}`,
+            `## Installation`,
+            `${response.installation}`,
+            `## Usage`,
+            `${response.usage}`,
+            `## License`,
+            `${response.license}`,
+            `## Contributing`,
+            `${response.contributing}`,
+            `## Tests`,
+            `${response.tests}`,
+            `## Collaboration`,
+            `${response.collaboration}`
+        ]
+    }
+    addToFile();
+
+    for(i=0; i<copy.length; i++){
+        await fs.appendFile('project-readme.md', copy[i] + "\n" + "\n", (err) =>{
+            if (err) throw err;
+        });
+    }
 
   }
-  mainApp()
+  mainApp();
