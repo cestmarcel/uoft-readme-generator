@@ -1,4 +1,4 @@
-[<img src="https://img.shields.io/badge/Version-1.1.1-orange">]
+<img src="https://img.shields.io/badge/Version-1.1.1-orange">
 
 # Title
 
@@ -6,27 +6,36 @@
 
 Description
 
+## Table of contents
+
+- Installation"
+"- Usage"
+"- License"
+"- Contributing"
+"- Tests"
+"-Collaboration
+
 ## Installation
 
 Installing
 
 ## Usage
 
-Use
+Instructions
 
 ## License
 
-License MIT
+License
 
 ## Contributing
 
-Contributing to the project
+Contributing
 
 ## Tests
 
-Test
+Testsssssss
 
 ## Collaboration
 
-Collaborating
+None
 

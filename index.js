@@ -32,6 +32,30 @@ async function mainApp(){
         name: "color1"
       },
       {
+        type: "confirm",
+        message: "Would you like to add a second badge?",
+        name: "badge2confirm"
+      },
+      {
+        type: "text",
+        message: "Please include at least one badge. What's the label of your second badge?",
+        name: "label2",
+        when: (response) => response.badge2confirm == true
+      },
+      {
+        type: "text",
+        message: "What's the message of your second badge?",
+        name: "message2",
+        when: (response) => response.label2 == true
+      },
+      {
+        type: "list",
+        message: "Please choose a color for your second badge.",
+        choices: ["orange", "green", "red", "blue", "yellow", "gray", "darkgray"],
+        name: "color2",
+        when: (response) => response.message2 == true
+      },
+      {
         type: "text",
         message: "What is your project's title?",
         name: "title"
@@ -77,10 +101,12 @@ async function mainApp(){
 
     function addToFile(){
         copy = [
-            `[<img src="https://img.shields.io/badge/${response.label1}-${response.message1}-${response.color1}">]`,
+            `<img src="https://img.shields.io/badge/${response.label1}-${response.message1}-${response.color1}">`,
             `# ${response.title}`,
             `## Description`,
             `${response.description}`,
+            `## Table of contents`,
+            `- [Installation](#Installation)\n- [Usage](#Usage)\n- [License](#License)\n- [Contributing](#Contributing)\n- [Tests](#Tests)\n- [Collaboration](#Collaboration)`,
             `## Installation`,
             `${response.installation}`,
             `## Usage`,
