@@ -91,8 +91,8 @@ async function mainApp(){
       }
     ])
 
+    // Creating empty array to store elements of readme and fill with values from user prompts
     var copy = [];
-
     function addToFile(){
         copy = [
             `<img src="https://img.shields.io/badge/${response.user}-${response.title}-navy">`,
@@ -120,9 +120,11 @@ async function mainApp(){
         ]
     }
     addToFile();
-
+    
+    // Empty file before writing new content to avoid duplicate entries
     await fs.writeFile('project-readme.md', "");
 
+    // Add user input to readme file
     for(i=0; i<copy.length; i++){
         await fs.appendFile('project-readme.md', copy[i] + "\n" + "\n", (err) =>{
             if (err) throw err;
