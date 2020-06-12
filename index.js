@@ -8,27 +8,32 @@ async function mainApp(){
       {
         type: "text",
         message: "What is your Github username?",
-        name: "user"
+        name: "user",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid username"} return true}
       },
       {
         type: "text",
         message: "What is your Github email address?",
-        name: "email"
+        name: "email",
+        validate: (input) => {if (input == '' || !input.includes("@") ) {return "Error: Please enter a valid email address"} return true}
       },
       {
         type: "text",
         message: "Please provide a link to your Github profile picture.",
-        name: "profile"
+        name: "profile",
+        validate: (input) => {if (input == '' || !input.includes("http") ) {return "Error: The link has to start with http or https"} return true}
       },
       {
         type: "text",
         message: "Please include a badge. What label do you want to assign to your badge?",
-        name: "label"
+        name: "label",
+        validate: (input) => {if (input == '') {return "Error: You have to assign a label"} return true}
       },
       {
         type: "text",
         message: "What's the message of your badge?",
-        name: "message"
+        name: "message",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid message"} return true}
       },
       {
         type: "list",
@@ -39,42 +44,50 @@ async function mainApp(){
       {
         type: "text",
         message: "What is your project's title?",
-        name: "title"
+        name: "title",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid title"} return true}
       },
       {
         type: "text",
         message: "Please enter your project's description.",
-        name: "description"
+        name: "description",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid description"} return true}
       },
       {
         type: "text",
         message: "What steps are required to install your project? Please provide a description.",
-        name: "installation"
+        name: "installation",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid description of the installation process"} return true}
       },
       {
         type: "text",
-        message: "Provide instructiona and examples around the use of your application.",
-        name: "usage"
+        message: "Provide instructions and examples around the use of your application.",
+        name: "usage",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid description of the usage"} return true}
       },
       {
         type: "text",
         message: "Add a license to your project to let people know what they can do with your project.",
-        name: "license"
+        name: "license",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid license"} return true}
       },
       {
         type: "text",
         message: "Let others know how they can contribute to your project.",
-        name: "contributing"
+        name: "contributing",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid description of the contribution process"} return true}
       },
       {
         type: "text",
         message: "Add examples on how to run tests for your application.",
-        name: "tests"
+        name: "tests",
+        validate: (input) => {if (input == '') {return "Error: Please enter a valid description of the tests"} return true}
       },
       {
         type: "text",
         message: "List your collaborators, third party assets, and tutorials you used. Please also provide links for them.",
-        name: "credits"
+        name: "credits",
+        validate: (input) => {if (input == '') {return `Error: This field cannot be empty. Please enter "None" if none of the above applies`} return true}
       }
     ])
 
