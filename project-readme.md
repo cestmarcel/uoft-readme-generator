@@ -1,6 +1,8 @@
+<img src="https://img.shields.io/badge/test-Title of Project-navy">
+
 <img src="https://img.shields.io/badge/Version-1.1.1-orange">
 
-# Title
+# Title of Project
 
 ## Description
 
@@ -8,34 +10,34 @@ Description
 
 ## Table of contents
 
-- Installation"
-"- Usage"
-"- License"
-"- Contributing"
-"- Tests"
-"-Collaboration
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Credits](#Credits)
 
 ## Installation
 
-Installing
+Installation
 
 ## Usage
 
-Instructions
+Usage
 
 ## License
 
-License
+MIT License
 
 ## Contributing
 
-Contributing
+COntribute
 
 ## Tests
 
-Testsssssss
+Tests
 
-## Collaboration
+## Credits
 
 None
 
