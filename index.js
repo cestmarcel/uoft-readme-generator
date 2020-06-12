@@ -100,7 +100,10 @@ async function mainApp(){
             `## Tests`,
             `${response.tests}`,
             `## Credits`,
-            `${response.credits}`
+            `${response.credits}`,
+            `## Questions`,
+            `<img src="${response.profile}">`,
+            `In case you have any questions, please drop me an email at: ${response.email}`
         ]
     }
     addToFile();
