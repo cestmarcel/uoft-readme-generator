@@ -47,3 +47,52 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 In case you have any questions, please drop me an email at: test@test.io
 
+<img src="https://img.shields.io/badge/testi-Title of project-navy">
+
+<img src="https://img.shields.io/badge/Version-1.1.1-orange">
+
+# Title of project
+
+## Description
+
+This is a description
+
+## Table of contents
+
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Credits](#Credits)
+
+## Installation
+
+These are the steps
+
+## Usage
+
+Use of application
+
+## License
+
+MIT License
+
+## Contributing
+
+Contribution
+
+## Tests
+
+Testssssss
+
+## Credits
+
+None
+
+## Questions
+
+<img src="https://vignette.wikia.nocookie.net/schitts-creek/images/1/10/Alexis-s5.jpg/revision/latest?cb=20190111053312">
+
+In case you have any questions, please drop me an email at: hihi@test.com
+
