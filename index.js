@@ -7,6 +7,11 @@ async function mainApp(){
     .prompt([
       {
         type: "text",
+        message: "What is your Github username?",
+        name: "user"
+      },
+      {
+        type: "text",
         message: "What is your Github email address?",
         name: "email"
       },
@@ -17,43 +22,19 @@ async function mainApp(){
       },
       {
         type: "text",
-        message: "Please include at least one badge. What's the label of your first badge?",
-        name: "label1"
+        message: "Please include a badge. What label do you want to assign to your badge?",
+        name: "label"
       },
       {
         type: "text",
-        message: "What's the message of your first badge?",
-        name: "message1"
+        message: "What's the message of your badge?",
+        name: "message"
       },
       {
         type: "list",
-        message: "Please choose a color for your first badge.",
+        message: "Please choose a color for your badge.",
         choices: ["orange", "green", "red", "blue", "yellow", "gray", "darkgray"],
-        name: "color1"
-      },
-      {
-        type: "confirm",
-        message: "Would you like to add a second badge?",
-        name: "badge2confirm"
-      },
-      {
-        type: "text",
-        message: "Please include at least one badge. What's the label of your second badge?",
-        name: "label2",
-        when: (response) => response.badge2confirm == true
-      },
-      {
-        type: "text",
-        message: "What's the message of your second badge?",
-        name: "message2",
-        when: (response) => response.label2 == true
-      },
-      {
-        type: "list",
-        message: "Please choose a color for your second badge.",
-        choices: ["orange", "green", "red", "blue", "yellow", "gray", "darkgray"],
-        name: "color2",
-        when: (response) => response.message2 == true
+        name: "color"
       },
       {
         type: "text",
@@ -93,7 +74,7 @@ async function mainApp(){
       {
         type: "text",
         message: "List your collaborators, third party assets, and tutorials you used. Please also provide links for them.",
-        name: "collaboration"
+        name: "credits"
       }
     ])
 
@@ -101,12 +82,13 @@ async function mainApp(){
 
     function addToFile(){
         copy = [
-            `<img src="https://img.shields.io/badge/${response.label1}-${response.message1}-${response.color1}">`,
+            `<img src="https://img.shields.io/badge/${response.user}-${response.title}-navy">`,
+            `<img src="https://img.shields.io/badge/${response.label}-${response.message}-${response.color}">`,
             `# ${response.title}`,
             `## Description`,
             `${response.description}`,
             `## Table of contents`,
-            `- [Installation](#Installation)\n- [Usage](#Usage)\n- [License](#License)\n- [Contributing](#Contributing)\n- [Tests](#Tests)\n- [Collaboration](#Collaboration)`,
+            `- [Installation](#Installation)\n- [Usage](#Usage)\n- [License](#License)\n- [Contributing](#Contributing)\n- [Tests](#Tests)\n- [Credits](#Credits)`,
             `## Installation`,
             `${response.installation}`,
             `## Usage`,
@@ -117,8 +99,8 @@ async function mainApp(){
             `${response.contributing}`,
             `## Tests`,
             `${response.tests}`,
-            `## Collaboration`,
-            `${response.collaboration}`
+            `## Credits`,
+            `${response.credits}`
         ]
     }
     addToFile();
