@@ -121,6 +121,8 @@ async function mainApp(){
     }
     addToFile();
 
+    await fs.writeFile('project-readme.md', "");
+
     for(i=0; i<copy.length; i++){
         await fs.appendFile('project-readme.md', copy[i] + "\n" + "\n", (err) =>{
             if (err) throw err;
