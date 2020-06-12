@@ -122,11 +122,11 @@ async function mainApp(){
     addToFile();
     
     // Empty file before writing new content to avoid duplicate entries
-    await fs.writeFile('project-readme.md', "");
+    await fs.writeFile('README.md', "");
 
     // Add user input to readme file
     for(i=0; i<copy.length; i++){
-        await fs.appendFile('project-readme.md', copy[i] + "\n" + "\n", (err) =>{
+        await fs.appendFile('README.md', copy[i] + "\n" + "\n", (err) =>{
             if (err) throw err;
         });
     }
