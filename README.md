@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a simple command line generator to create a quality readme, quickly and easily.
+This is a simple command line generator to create a quality readme, quickly and easily. The readme you're reading right now was initially created using this application!
 
 ## Table of contents
 
