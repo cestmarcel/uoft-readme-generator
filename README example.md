@@ -19,7 +19,7 @@ This is a simple command line generator to create a quality readme, quickly and 
 
 ## Installation
 
-Simply download the js file and place it in your repository. Make sure you have the [inquirer module](https://www.npmjs.com/package/inquirer) installed. In your Terminal or Git Bash, navigate to the repo and intitialize the script by typing "node index.js" and follow the prompts on the screen!
+Simply download the js file and place it in your repository. Make sure you have the inquirer module installed. In your Terminal or Git Bash, navigate to the repo and intitialize the script by typing "node index.js" and follow the prompts on the screen!
 
 ## Usage
 
